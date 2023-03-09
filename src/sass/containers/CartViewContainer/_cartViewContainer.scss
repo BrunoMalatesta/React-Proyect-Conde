@@ -1,0 +1,98 @@
+.cartView {
+    @include flex(column, center, center, $spacing-m);
+    
+    .cartView__message {
+        @include text($color-text, $text-m, center, 1em);
+
+        .message__link {
+            cursor: pointer;
+            color: $color-secondary;
+            text-decoration: underline;
+
+            &:hover { 
+                color: $color-primary;
+            }
+        }
+    }
+
+    .cartView__header {
+        @include flex(row, space-between, center, 0);
+        width: 100%;
+        border-bottom: $b-desktop solid $color-bg-grey;
+        padding: $spacing-m;
+
+        .header__title {
+            @include text($color-text, $text-l, center, 1em);
+        }
+
+        .header__links {
+            @include flex(row, center, center, 0);
+
+            .link, .clear {
+                @include text($color-secondary, $text-base, center, 1em);
+                cursor: pointer;
+
+                &:hover { 
+                    color: $color-primary;
+                }
+            }
+
+            .link {
+                padding-right: $spacing-l;
+                border-right: $b-desktop solid $color-bg-grey;
+            }
+
+            .clear {
+                padding-left: $spacing-l;
+            }
+            
+        }
+    }
+
+    .cartView__total {
+        @include flex(row, flex-end, center, $spacing-m);
+        width: 100%;
+        border-top: $b-desktop solid $color-bg-grey;
+        padding: $spacing-m;
+
+        .title {
+            @include text($color-secondary, $text-l, left, 1em);
+        }
+
+        .total {
+            @include text($color-text, $text-l, left, 1em);
+        }
+    }
+
+    .cartView__checkout {
+        @include flex(column, center, center, $spacing-l);
+        width: 100%;
+        padding: $spacing-m;
+
+        .checkout__title {
+            @include text($color-secondary, 2rem, left, 1em);
+            align-self: flex-start;
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .cartView {
+        .cartView__message {
+            @include text($color-text, 2rem, center, 1em);
+        }
+    
+        .cartView__header {
+            @include flex(column, center, center, $spacing-m);
+            width: 96%;
+    
+            .header__title {
+                @include text($color-text, $text-l, center, 1em);
+            }
+        }
+    
+        .cartView__total {
+            width: 96%;
+        }
+    }
+}

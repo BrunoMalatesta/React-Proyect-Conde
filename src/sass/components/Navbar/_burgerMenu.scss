@@ -1,0 +1,29 @@
+.navbar__burger-menu {
+    .burger-menu__open {
+        cursor: pointer;
+        stroke: $color-secondary;
+        fill: $color-secondary;
+        width: 3rem;
+        height: 3rem;
+        transition: all 0.5s ease;
+    
+        &:hover {
+            stroke: $color-primary;
+            fill: $color-primary;
+        }
+    }
+    
+    .burger-menu__close {
+        cursor: pointer;
+        stroke: $color-secondary;
+        fill: $color-secondary;
+        width: 3rem;
+        height: 3rem;
+        transition: all 0.5s ease;
+    
+        &:hover {
+            stroke: $color-primary;
+            fill: $color-primary;
+        }
+    }
+}

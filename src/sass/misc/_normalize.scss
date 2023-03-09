@@ -1,0 +1,31 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: $font-base;
+    background: $color-bg;
+    color: $color-text;
+}
+
+ul{
+    list-style-type: none;
+}
+
+a{
+    text-decoration: none;
+}
+
+.mainContent {
+    @include flex(column, center, center, 0);
+    margin: 6rem auto 0;
+    max-width: 1200px;
+    min-height: calc(100vh - 6rem);
+}
